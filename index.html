@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboCup Team Meeting Minutes</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+  <header>
+    <div>ALL NOTES</div>
+    <nav>
+      <ul>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#media">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>RoboCup Team Meeting Minutes</h1>
+    <!-- An image for illustration -->
+    <img src="/images/robocup.jpg" alt="RoboCup Image" width="250" />
+
+    <section id="members">
+      <h2>Members</h2>
+      <ul>
+        <li>Bob Smith</li>
+        <li>Emily Johnson</li>
+        <li>Michael Brown</li>
+        <li>Sarah Davis</li>
+      </ul>
+    </section>
+
+    <section id="tasks">
+      <h2>Tasks</h2>
+      <hr>
+      <ol>
+        <li><input type="checkbox" /> Get basic pass mechanisms done</li>
+        <li><input type="checkbox" /> Introduce dynamic robot dribbling speed</li>
+        <li><input type="checkbox" /> Develop a scoring system</li>
+        <li><input type="checkbox" /> Improve smoother deceleration</li>
+      </ol>
+    </section>
+    
+    <section id="progress">
+      <h2>Progress</h2>
+      
+      <h3>CoordinatedPassNode</h3>
+      <p>
+        When a robot (<b>passer</b>) enters <span class="italic"><i>CoordinatedPassNode</i></span>, 
+        it generates a <strong>CoordinatedPassInfo</strong> object that contains: 
+        <em>Receiver ID</em> (which robot will receive the ball), Pass location 
+        (where the ball should be kicked).
+      </p>
+      
+      <h3>CentralGameState</h3>
+      <p>
+        A class similar to GameInfo that acts as the centralized data storage for key game-related information, 
+        ensuring all modules have access to the latest coordinated pass data.
+      </p>
+    </section>
+    
+    <section id="media">
+      <h2>Media</h2>
+      <p>Qualification Video</p>
+      
+      <audio controls>
+        <source src="/media/game.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <br />
+      <video controls width="320">
+        <source src="/media/qualification.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br />
+      <details>
+        <summary>Additional Media Info</summary>
+        <p>Here you can find supplementary media files and documentation.</p>
+      </details>
+      
+      <!-- An extra break tag -->
+      <br />
+      
+      <!-- A div with a reference to an external site -->
+      <div>
+        <p>For further details, visit our <a href="https://ieeeucsd.org/projects/robocup">official website</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <form onsubmit="alert('Joined'); return false;">
+      <fieldset>
+        <legend>Join our team!</legend>
+        <input type="text" placeholder="Enter Email Address" />
+        <br />
+        <textarea placeholder="Your experience"></textarea>
+        <br />
+        <label for="category">Choose a subteam:</label>
+        <select id="category">
+          <option value="mechanical">Mechanical</option>
+          <option value="electrical">Electrical</option>
+          <option value="software">Software</option>
+        </select>
+        <br />
+        <label for="browsers">Choose your favorite browser:</label>
+        <input list="browsers" id="browser-choice" name="browser-choice" placeholder="Select or type a browser">
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Safari"></option>
+          <option value="Edge"></option>
+        </datalist>
+        <br />
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <p>&copy; 2025 RoboCup Team Meeting Minutes. All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>
