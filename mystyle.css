@@ -8,9 +8,32 @@
     font-family: Consolas, monaco, monospace;
 }
 
+* {
+    /* universal selector */
+    box-sizing: border-box;
+}
+
 body {
     /* set the background color to lightblue */
     background-color: hsla(195, 53%, 79%, 0.9);
+}
+
+p {
+    /* element selector */
+    margin-bottom: 1em;
+}
+
+.highlight {
+    /* highlight heading 1 */
+    background-color: var(--primary-color, #FF6600);
+    color: white;
+    padding: 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Element and Class Selector */
+h1.highlight {
+    border: 1pt dashed #000;
 }
 
 header {
@@ -32,6 +55,30 @@ header {
 header > div {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Descendant Combinator */
+nav ul li a {
+    padding: 0.25em;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Child Combinator */
+section > h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25em;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + hr {
+    margin-top: 0.5em;
+    border-color: #a7aeff;
+}
+
+/* General Sibling Combinator */
+h3 ~ p {
+    margin-left: 1em;
 }
 
 nav ul {
@@ -91,6 +138,7 @@ section h2 {
     margin-left: 20px;
 }
 
+/* ID Selector */
 #members {
     margin-top: 20px;
     margin-right: 15px;
@@ -109,9 +157,27 @@ section h2 {
     border-radius: 8px;
 }
 
+/* Selector List */
+h1, h2 {
+    font-family: sans-serif;
+    color: navy;
+}
+
+/* Attribute Selector */
+a[href] {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+a[href^="https"] {
+    word-break: break-all;
+}
+
+
 #members ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: 100px;
     gap: 0.5em;
     padding: 0;
     list-style: none;
@@ -121,6 +187,13 @@ section h2 {
     background: #cedce0;
     padding: 0.5em;
     border-radius: 4px;
+}
+
+#members hr {
+    /* solid line */
+    border: none;
+    border-top: 1px solid #a7aeff;
+    margin: 1em 0;
 }
 
 #tasks {
@@ -168,10 +241,18 @@ section h2 {
     border-radius: 8px;
 }
 
+#progress hr {
+    /* solid line */
+    border: none;
+    border-top: 1px solid #a7aeff;
+    margin: 1em 0;
+}
+
 /* Text styling */
 p, li {
     color: #333;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .italic {
@@ -236,6 +317,25 @@ i, em {
     flex-direction: column;
     gap: 1em;
     align-items: center;
+    margin: 2cm auto;
+}
+
+/* New Selector :has() */
+section:has(details) {
+    background-color: rgba(200, 255, 200, 0.3);
+}
+
+/* Nested Selectors */
+nav {
+    ul {
+        li {
+            & > a {
+                &:hover {
+                    background-color: hsla(0, 0%, 0%, 0.1);
+                }
+            }
+        }
+    }
 }
 
 #media audio,
@@ -252,6 +352,7 @@ footer {
     background-color: #f8f8f8;
     padding: 2em 1em;
     text-align: center;
+    position: static;
 }
 
 footer form {
