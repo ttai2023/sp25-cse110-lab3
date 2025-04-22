@@ -1,0 +1,309 @@
+/* My CSS File */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* define a custom property */
+    --primary-color: rgb(51, 152, 219);
+    font-family: Consolas, monaco, monospace;
+}
+
+body {
+    /* set the background color to lightblue */
+    background-color: hsla(195, 53%, 79%, 0.9);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Padding longhand */
+    padding-top: 1em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    /* Padding shorthand */
+    padding: 1em 2em;
+    font-family: 'Roboto', Consolas, monaco, monospace;
+}
+
+header > div {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    /* horizontal list */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+nav li a {
+    /* highlight color */
+    color: #fff;
+    text-decoration: none;
+    padding: 0.25em;
+}
+
+nav li a:hover {
+    /* pseudo-class */
+    text-decoration: underline;
+    /* color mix example in hover */
+    color: color-mix(in display-p3, color(display-p3 1 0 0) 50%, var(--primary-color) 50%);
+}
+
+main {
+    /* center main element */
+    max-width: 900px;
+    margin: 2cm auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    /* set the heading 1 text color to navy */
+    color: navy;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    margin: 2em auto;
+    padding: 1em;
+    border: 1pt solid rgba(204, 204, 204, 0.8);
+    border-radius: 4px;
+}
+
+section h2 {
+    /* set the heading 2 text color to marine */
+    color: #0e3144;
+    margin-left: 20px;
+}
+
+#members {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin: auto;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding: 15px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a7aeff;
+    border-radius: 8px;
+}
+
+#members ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5em;
+    padding: 0;
+    list-style: none;
+}
+
+#members li {
+    background: #cedce0;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+#tasks {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin: 20px auto;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding: 15px 10px;
+
+    /* border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333;
+    border-radius: 8px;
+}
+
+#tasks hr {
+    /* solid line */
+    border: none;
+    border-top: 1px solid #333333;
+    margin: 1em 0;
+}
+
+#progress {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin: 20px auto;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding: 15px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a7aeff;
+    border-radius: 8px;
+}
+
+/* Text styling */
+p, li {
+    color: #333;
+    line-height: 1.5;
+}
+
+.italic {
+    font-style: italic;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
+}
+
+/* Utility displays */
+.display-block      { display: block; }
+.display-inline-block { display: inline-block; }
+.display-inline     { display: inline; }
+.display-none       { display: none; }
+
+/* Sizing utility */
+.box-size {
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+    height: 20vh;
+    background: #fff;
+}
+
+/* Positioning utility */
+.position-relative { position: relative; top: 10px; left: 10px; }
+.position-absolute { position: absolute; top: 50px; right: 50px; }
+.position-sticky   { position: sticky; top: 0; }
+
+/* Tasks list styling */
+#tasks li {
+    margin-bottom: 0.5em;
+}
+
+#tasks input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+#media {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin: 20px auto;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding: 15px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a7aeff;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+#media audio,
+#media video {
+    width: 100%;
+    max-width: 320px;
+}
+
+details {
+    margin-top: 1em;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+footer form {
+    max-width: 600px;
+    margin: 1em auto;
+}
+
+footer fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+footer legend {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+footer input[type="text"],
+footer textarea,
+footer select,
+footer input[list] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Example of color-mix fallback for hover */
+}
+
+footer button[type="submit"]:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 80%, black 20%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header, main, footer {
+        padding: 0 1em;
+    }
+    #media {
+        flex-direction: column;
+    }
+    #members ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
