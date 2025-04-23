@@ -393,7 +393,7 @@ footer button[type="submit"] {
 }
 
 footer button[type="submit"]:hover {
-    background-color: color-mix(in srgb, var(--primary-color) 80%, black 20%);
+    background-color: color-mix(in display-p3, color(display-p3 1 0 0) 50%, var(--primary-color) 50%)
 }
 
 /* Responsive adjustments */
